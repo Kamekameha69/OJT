@@ -1,18 +1,17 @@
 <?php
-error_reporting(0);
-//echo '<p style="color:black; margin-top:40px;">'.$_SERVER['REQUEST_URI'].'</p>';
+$servername = "localhost:3307"; // Change this if your database is hosted remotely
+$username = "root"; // Change this to your database username
+$password = ""; // Change this to your database password
+$database = "inventory"; // Change this to your actual database name
 
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
 
-$host = "localhost";
-$user = "root";
-$dbpass = "";
-$dbname = "thesis";
-//$dbname = "bsau_library";
-global $conn;
-$conn = mysqli_connect($host,$user,$dbpass) or die('Failed to connect to Database Server');
-$db = mysqli_select_db($conn,$dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-mysqli_query($conn,"SET CHARACTER SET 'utf8'");
-mysqli_query($conn,"SET SESSION collation_connection ='utf8_unicode_ci'");
-
-
+// Uncomment the line below if you want a success message (for debugging only)
+// echo "Connected successfully";
+?>

@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Institute Form</title>
+    <title>Add Program Form</title>
+    <link rel="icon" href="../asset/logo.png" type="image/png" sizes="64x64">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="col-6">
-            <h2 class="mb-4 text-center">Add Institute</h2>
+            <h2 class="mb-4 text-center">Add Program</h2>
             <form>
                 <div class="mb-3">
-                    <label for="institute" class="form-label fw-bold">Institute:</label>
-                    <input type="text" class="form-control" id="institute" placeholder="Enter Institute">
+                    <label for="program" class="form-label fw-bold">Program:</label>
+                    <input type="text" class="form-control" id="program" placeholder="Enter Program">
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary">Submit</button>
