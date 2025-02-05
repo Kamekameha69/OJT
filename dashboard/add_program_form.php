@@ -13,13 +13,13 @@
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="col-6">
             <h2 class="mb-4 text-center">Add Program</h2>
-            <form>
+            <form action="../config/function.php" method="post">
                 <div class="mb-3">
-                    <label for="program" class="form-label fw-bold">Program:</label>
-                    <input type="text" class="form-control" id="program" placeholder="Enter Program">
+                    <label for="program_name" class="form-label fw-bold">Program:</label>
+                    <input type="text" class="form-control" id="program_name" name="program_name" placeholder="Enter Program">
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" name="add_program">Submit</button>
                 </div>
             </form>
         </div>

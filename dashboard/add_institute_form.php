@@ -13,17 +13,18 @@
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="col-6">
             <h2 class="mb-4 text-center">Add Institute</h2>
-            <form>
+            <form action="../config/function.php" method="post">
                 <div class="mb-3">
-                    <label for="institute" class="form-label fw-bold">Institute:</label>
-                    <input type="text" class="form-control" id="institute" placeholder="Enter Institute">
+                    <label for="institute_name" class="form-label fw-bold">Institute:</label>
+                    <input type="text" class="form-control" id="institute_name" name="institute_name" placeholder="Enter Institute" required>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" name="add_institute">Submit</button>
                 </div>
             </form>
         </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

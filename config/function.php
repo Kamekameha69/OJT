@@ -2,6 +2,9 @@
 
 require_once("db.php");
 
+
+// ------BOOKS--------
+
 if (isset($_POST['add_book'])) {
 
     $institute_id = mysqli_real_escape_string($conn, $_POST['institute_id']);
@@ -25,6 +28,63 @@ if (isset($_POST['add_book'])) {
         exit();
     } else {
         echo "Failed to add book. Error: " . mysqli_error($conn);
+    }
+}
+
+// --------INSTITUTE---------
+
+if (isset($_POST['add_institute'])) {
+
+    $institute_name= mysqli_real_escape_string($conn, $_POST['institute_name']);
+
+    $query = "INSERT INTO institute (institute_name) 
+              VALUES ('$institute_name')";
+
+    $result = mysqli_query($conn, $query);
+
+    if ($result) {
+        header("Location: ../dashboard/collection_dashboard.php");
+        exit();
+    } else {
+        echo "Failed to add institute. Error: " . mysqli_error($conn);
+    }
+}
+
+// ---------PROGRAM------------
+
+if (isset($_POST['add_program'])) {
+
+    $program_name= mysqli_real_escape_string($conn, $_POST['program_name']);
+
+    $query = "INSERT INTO program (program_name) 
+              VALUES ('$program_name')";
+
+    $result = mysqli_query($conn, $query);
+
+    if ($result) {
+        header("Location: ../dashboard/collection_dashboard.php");
+        exit();
+    } else {
+        echo "Failed to add program. Error: " . mysqli_error($conn);
+    }
+}
+
+// ----------SUBJECT------------
+
+if (isset($_POST['add_course_code'])) {
+
+    $course_code= mysqli_real_escape_string($conn, $_POST['course_code']);
+
+    $query = "INSERT INTO program (course_code) 
+              VALUES ('$course_code')";
+
+    $result = mysqli_query($conn, $query);
+
+    if ($result) {
+        header("Location: ../dashboard/collection_dashboard.php");
+        exit();
+    } else {
+        echo "Failed to add program. Error: " . mysqli_error($conn);
     }
 }
 
