@@ -9,7 +9,7 @@ if (isset($_POST['add_book'])) {
 
     $institute_id = mysqli_real_escape_string($conn, $_POST['institute_id']);
     $program_id = mysqli_real_escape_string($conn, $_POST['program_id']);
-    $course_code = mysqli_real_escape_string($conn, $_POST['course_code']);
+    $course_code_id = mysqli_real_escape_string($conn, $_POST['course_code_id']);
     $call_no = mysqli_real_escape_string($conn, $_POST['call_no']);
     $author = mysqli_real_escape_string($conn, $_POST['author']);
     $title = mysqli_real_escape_string($conn, $_POST['title']);
@@ -18,7 +18,7 @@ if (isset($_POST['add_book'])) {
     $year = mysqli_real_escape_string($conn, $_POST['year']);
     $volume = mysqli_real_escape_string($conn, $_POST['volume']);
 
-    $query = "INSERT INTO book (institute_id, program_id, course_code, call_no, author, title, edition, acc_no, year, volume) 
+    $query = "INSERT INTO book (institute_id, program_id, course_code_id, call_no, author, title, edition, acc_no, year, volume) 
               VALUES ('$institute_id', '$program_id', '$course_code', '$call_no', '$author', '$title', '$edition', '$acc_no', '$year', '$volume')";
 
     $result = mysqli_query($conn, $query);
@@ -35,7 +35,7 @@ if (isset($_POST['add_book'])) {
 
 if (isset($_POST['add_institute'])) {
 
-    $institute_name= mysqli_real_escape_string($conn, $_POST['institute_name']);
+    $institute_name = mysqli_real_escape_string($conn, $_POST['institute_name']);
 
     $query = "INSERT INTO institute (institute_name) 
               VALUES ('$institute_name')";
@@ -54,7 +54,7 @@ if (isset($_POST['add_institute'])) {
 
 if (isset($_POST['add_program'])) {
 
-    $program_name= mysqli_real_escape_string($conn, $_POST['program_name']);
+    $program_name = mysqli_real_escape_string($conn, $_POST['program_name']);
 
     $query = "INSERT INTO program (program_name) 
               VALUES ('$program_name')";
@@ -73,7 +73,7 @@ if (isset($_POST['add_program'])) {
 
 if (isset($_POST['add_course_code'])) {
 
-    $course_code= mysqli_real_escape_string($conn, $_POST['course_code']);
+    $course_code = mysqli_real_escape_string($conn, $_POST['course_code']);
 
     $query = "INSERT INTO program (course_code) 
               VALUES ('$course_code')";
@@ -89,5 +89,3 @@ if (isset($_POST['add_course_code'])) {
 }
 
 $conn->close();
-
-?>

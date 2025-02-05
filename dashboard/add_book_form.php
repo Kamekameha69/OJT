@@ -28,8 +28,8 @@
 
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <label for="course_code" class="form-label">Course Code:</label>
-                        <input type="text" class="form-control" id="course_code" name="course_code" placeholder="Enter Course Code">
+                        <label for="course_code_id" class="form-label">Course Code:</label>
+                        <input type="text" class="form-control" id="course_code_id" name="course_code_id" placeholder="Enter Course Code">
                     </div>
                     <div class="col-md-6">
                         <label for="call_no" class="form-label">Call No.:</label>
